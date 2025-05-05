@@ -1,0 +1,44 @@
+ <!-- <div class="container">
+    <h3>Register</h3>
+    <form (submit)="register()">
+      <input class="form-control" [(ngModel)]="user.name" name="name" placeholder="Name" required>
+      <input class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" required>
+      <input class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" type="password" required>
+      <select class="form-control" [(ngModel)]="user.role" name="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button class="btn btn-primary mt-2">Register</button>
+    </form>
+  </div>
+   -->
+
+   <h1 class="heading">Register</h1>
+   <div class="container">
+    <div class="sign-in">
+        <h2>Register</h2>
+        <form (submit)="register()">
+          <input class="form-control" [(ngModel)]="user.name" name="name" placeholder="Name" class="input-field" required>
+          <input class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" class="input-field" required>
+          <input class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" type="password" class="input-field" required>
+          <select class="form-control" [(ngModel)]="user.role" name="role">
+            <option value="user">👤 Student</option>
+            <!-- <option value="admin">🛡️ Admin</option> -->
+          </select>
+          <button class="btn btn-primary mt-2">Register</button>
+        </form>
+     
+          <div class="social-icons">
+            <span><i class="fab fa-facebook-f"></i></span>
+            <span><i class="fab fa-twitter"></i></span>
+            <span><i class="fab fa-instagram"></i></span>
+            <span><i class="fab fa-linkedin-in"></i></span>
+         
+        </div>
+    </div>
+    <div class="new-brand">
+        <h2>New to MyQuiz?</h2>
+        <p> Get started with MyQuiz today: explore thousands of bite‑sized quizzes, earn badges for every milestone, and unlock new levels as you sharpen your knowledge and make learning a game</p>
+         
+    </div>
+</div>

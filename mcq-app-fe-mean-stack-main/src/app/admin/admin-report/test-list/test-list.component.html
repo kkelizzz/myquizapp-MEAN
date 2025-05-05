@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Tests</h2>
+    <ul>
+      <li *ngFor="let test of tests">
+        <button class="test-button" (click)="viewReports(test._id)">
+          {{ test.name }}
+          <span class="arrow">→</span>
+          <span class="ripple"></span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Reports for Selected Test</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Score</th>
+          <th>Rank</th>
+          <th>Submitted At</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of reports">
+          <td>{{ report.userId?.name || 'Unknown' }}</td>
+          <td>
+            <div class="score-circle" [style.--percent]="report.score">
+              <div class="inner-circle">
+                {{ report.score }}%
+              </div>
+            </div>
+          </td>
+          <td>{{ report.rank || 'Loading...' }}</td>
+          <td>{{ report.date | date: 'h:mm a, dd-MM-yyyy' }}</td>
+          <td>
+            <button (click)="deleteReport(report._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  

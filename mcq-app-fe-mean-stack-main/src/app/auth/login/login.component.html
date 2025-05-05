@@ -1,0 +1,38 @@
+ <!-- <div class="container">
+    <h3>Login</h3>
+    <form (submit)="login()">
+      <input class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" required>
+      <input class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" type="password" required>
+      <button class="btn btn-success mt-2">Login</button>
+    </form>
+  </div>
+   -->
+   <h1 class="heading"><span class="login-text">Login / Register</span></h1>
+   <div class="container">
+     <div class="sign-in">
+         <h2>Sign in</h2>
+         <form (submit)="login()">
+         <input type="text" placeholder="Ex@gmail.com" [(ngModel)]="user.email" name="email" class="input-field" required>
+         <input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" class="input-field" required>
+         <button class="login-btn">LOGIN</button>
+         </form>
+ 
+         <div class="register-container">
+            Create a new account <strong> <a class="register-link" routerLink="/register"> Register ?</a> </strong>
+         </div>
+      
+           <div class="social-icons">
+             <span><i class="fab fa-facebook-f"></i></span>
+             <span><i class="fab fa-twitter"></i></span>
+             <span><i class="fab fa-instagram"></i></span>
+             <span><i class="fab fa-linkedin-in"></i></span>
+          
+         </div>
+     </div>
+     <div class="new-brand">
+       <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?t=st=1745321684~exp=1745325284~hmac=8c96dee6387966c4081d91ab15a4fee53c81c4438337901a0696cb9ff6b2f0ca&w=740"/>
+         <!-- <h2>Login / Register ?</h2> -->
+         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque ac consectetur dui, eos incididunt minima iure?</p> -->
+          
+     </div>
+ </div>

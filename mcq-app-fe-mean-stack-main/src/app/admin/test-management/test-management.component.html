@@ -1,0 +1,63 @@
+<!-- <div class="container">
+    <h2>Test List</h2>
+    <button class="btn btn-success" (click)="addTest()">Add Test</button>
+    <br /><br />
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Time Limit</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let test of tests">
+          <td>{{ test.name }}</td>
+          <td>{{ test.timeLimit }}</td>
+          <td>{{ test.date | date }}</td>
+          <td>
+            <button class="btn btn-info" (click)="editTest(test._id)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteTest(test._id)">Delete</button>
+            <button class="btn btn-secondary" (click)="goToQuestionManagement(test._id)">Questions</button>
+            <button (click)="copyLink(test._id)">Copy Test Link</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+   -->
+
+
+   <div class="container">
+    <div class="card main-card">
+      <img  src="https://img.freepik.com/premium-vector/add-tasks-concept-illustration_86047-928.jpg?w=826" alt="Main Card Image" />
+      <button class="btn add-task" (click)="addTest()">Add Test</button>
+    </div>
+  
+    <div class="small-container">
+      <div
+        class="card small-card"
+        *ngFor="let test of tests; let i = index">
+
+        <div class="card-content">
+          <img src="https://img.freepik.com/premium-vector/programming-icon-coding-symbol-vector_883533-967.jpg?w=740"/>
+          <h2 class="heading"> {{ test.name }}</h2>
+          <p>Time:{{test.timeLimit}} MIN</p>
+          <p>{{ test.date | date }}</p>
+          <div class="button-group">
+             <div class="list-group"> 
+            <i class="fa-solid fa-pencil" (click)="editTest(test._id)"></i>
+            <i class="fa-solid fa-trash" (click)="deleteTest(test._id)"></i>
+            <i class="fa-solid fa-link"(click)="copyLink(test._id)"></i>
+            </div>
+             
+            <!-- <button (click)="copyLink(test._id)">Copy Test Link</button> -->
+            <button class="btn add-questions" (click)="goToQuestionManagement(test._id)">Add Questions</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

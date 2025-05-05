@@ -1,0 +1,25 @@
+<!-- <div class="container">
+    <h2>Available Tests</h2>
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  
+    <div *ngFor="let test of tests" class="card my-3 p-3">
+      <h5>{{ test.name }}</h5>
+      <p>{{ test.description }}</p>
+      <button class="btn btn-primary" (click)="startTest(test._id)">Start Test</button>
+    </div>
+  </div>
+   -->
+
+   <h2 class="heading">Available Tests</h2>
+
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+<div *ngIf="!errorMessage" class="tests-container">
+  <div *ngFor="let test of tests" class="test-card">
+    <div class="test-info">
+      <div class="test-circle">{{ test.name }}</div>
+      <button class="start-button" (click)="startTest(test._id)">Start Test</button>
+    </div>
+  </div>
+</div>
+

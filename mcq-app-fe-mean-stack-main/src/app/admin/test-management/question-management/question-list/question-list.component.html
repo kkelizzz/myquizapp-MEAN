@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <h2>Questions for Test: {{ testId }}</h2>
+    <button class="btn btn-primary mb-3" (click)="addQuestion()">Add Question</button>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Options</th>
+          <th>Correct Answer</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let q of questions">
+          <td data-label="Question">{{ q.questionText }}</td>
+          <td data-label="Options">
+            <ul>
+              <li *ngFor="let opt of q.options">{{ opt }}</li>
+            </ul>
+          </td>
+          <td data-label="Correct Answer">{{ q.correctAnswer }}</td>
+          <td data-label="Actions">
+        
+          
+            <button class="btn btn-sm btn-warning" (click)="editQuestion(q._id)">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteQuestion(q._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

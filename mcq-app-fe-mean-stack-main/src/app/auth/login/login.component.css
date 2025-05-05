@@ -1,0 +1,178 @@
+ 
+  
+
+.container {
+
+    
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 2rem;
+     
+    height: 70vh;
+     
+    background: linear-gradient(to right, #a75ad6, #8d3fd8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.sign-in {
+    padding: 40px;
+    flex: 1;
+}
+
+.new-brand {
+    padding: 40px;
+    flex: 1;
+}
+
+.new-brand img{
+
+    width:100px;
+    height:100px;
+
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-btn, .sign-up-btn {
+    width: 107%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #4c007a;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+}
+
+.login-btn:hover, .sign-up-btn:hover {
+    background-color: #6a0dad;
+}
+
+.register-container{
+  
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    position: absolute;       /* position at the bottom */
+    bottom: 5rem;             /* adjust distance from bottom */
+    
+     margin-top: 1rem;
+     margin-left: 3em;
+    
+     gap:5px;
+    color:aliceblue
+}
+.login-text{
+
+    color:#f0efed;
+}
+.register-text{
+    color:rgb(235, 233, 233);
+}
+.heading strong{
+
+    color:rgb(230, 136, 30);
+}
+
+.register-link{
+     z-index:1;
+    cursor: pointer;
+    color:#d8c2ec;
+    text-decoration: underline;
+    
+}
+.heading{
+  display: flex;
+    margin-top:5rem;
+    justify-content: center;
+}
+
+
+.social-icons {
+
+display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    position: relative;       /* position at the bottom */
+    bottom: -4rem;             /* adjust distance from bottom */
+    left: 0;
+    right: 0;
+    margin: auto;
+    gap:3rem;
+    color:aliceblue;
+    z-index:1;
+}
+ 
+
+.social-icons span {
+     
+    font-size: 20px;
+    cursor: pointer;
+     
+}
+
+.social-icons span:hover{
+
+    transform: scale(1.05);
+    color: #2d2d2d;
+}
+
+.new-brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;    /* or center if you prefer */
+    padding: 40px;
+    border-top-right-radius: 10px;
+    z-index:0;
+    color: rgb(255, 255, 255);
+    background-image: url('https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?t=st=1745321684~exp=1745325284~hmac=8c96dee6387966c4081d91ab15a4fee53c81c4438337901a0696cb9ff6b2f0ca&w=740');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;          /* adjust as needed */
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+    overflow: hidden;
+     
+  }
+  
+  /* Optional: add a dark overlay for better text contrast */
+  .new-brand::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(143, 69, 212, 0.4);
+    pointer-events: none;
+  }
+  
+  /* Text sits above the overlay */
+  .new-brand h2,
+  .new-brand p {
+    position: relative;
+    margin: 0 0 1rem;
+    color:rgb(251, 252, 251);
+  }
+  
+  .new-brand h2 {
+    font-size: 2rem;
+  }
+  
+  .new-brand p {
+    font-size: 1rem;
+    max-width: 400px;
+  }
+  

@@ -1,0 +1,31 @@
+  <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo"><span>My</span><i>Quiz</i></div>
+    <ul class="nav-links">
+
+        <!-- this one is pending -->
+        <!-- @if (!isLoggedin) {
+          <li><a routerLink="/login">Login</a></li>
+        } @else {
+          <li (click)="logout()"><a>Logout</a></li>
+        }
+        -->
+        <li (click)="goToLogin()"><a>Login</a> </li>
+      <li (click)="logout()"><a>Logout</a> </li>
+    </ul>
+  </nav>
+  
+  <!-- Main Content -->
+  <router-outlet></router-outlet>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 MyQuiz. All rights reserved.</p>
+    <div class="footer-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin-in"></i>
+    </div>
+  </footer>
+  

@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+}
+
+.card {
+    background-color: rgb(255, 255, 255); /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(36, 25, 25, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below each card */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+.main-card {
+    width: 100%; /* Full width for the main card */
+    max-width: 800px; 
+    margin: 0 auto;/* Center the main card */
+    margin-bottom: 2rem;/* Maximum width for the main card */
+      
+}
+
+.main-card img {
+    width: 100%; /* Responsive image */
+    height: 20rem; /* Maintain aspect ratio */
+}
+
+.btn {
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.add-task {
+    background-color: #28a745; /* Green background for add task button */
+    color: white; /* White text */
+    display: block; /* Block display for full width */
+    margin: 20px auto; /* Center the button */
+}
+
+.add-task:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.small-container {
+    display: flex; /* Flexbox for small cards */
+    flex-wrap: wrap; /* Allow wrapping of small cards */
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px; /* Space between small cards */
+    cursor: pointer;
+}
+
+.small-card:hover{
+
+    transform: scale(1.05);
+    border: 2px solid #6c63ff;
+}
+    
+
+
+.small-card {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width for small cards */
+    min-width: 250px; /* Minimum width for small cards */
+    max-width: 300px; /* Maximum width for small cards */
+}
+
+.card-content {
+    padding: 15px; /* Padding inside small cards */
+}
+
+.card-content img{
+
+    width:100px;
+    height:100px;
+    background-size: contain;
+   margin: 0 auto;
+   display: flex;
+
+    justify-content: center;
+    
+    
+}
+
+.heading {
+    margin: 0 0 10px; /* Margin for heading */
+    color: #333; /* Darker color for heading */
+    text-transform: capitalize;
+}
+
+.button-group {
+    display: flex; /* Flexbox for button group */
+    gap: 10px; /* Space between buttons */
+    margin-top: 3rem; /* Space above button group */
+}
+.list-group{
+    margin-top:0.5rem;
+    display: flex;
+    gap:20px;
+}
+
+.list-group i{
+    cursor: pointer;
+    color:#f58c97;
+}
+.list-group i:hover{
+    transform: scale(1.05);
+    color:#140d0d;
+}
+.add-questions {
+    background-color: #007bff; /* Blue background for add questions button */
+    color: white; /* White text */
+    display: flex;
+    position: relative;
+    right:0;
+    margin-left:5rem;
+    font-size: 10px;
+    width:19rem;
+}
+
+.add-questions:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+.edit {
+    background-color: #17a2b8; /* Info button color */
+    color: white; /* White text */
+}
+
+.edit:hover {
+    background-color: #138496; /* Darker blue on hover */
+}
+
+.delete {
+    background-color: #dc3545; /* Red background for delete button */
+    color: white; /* White text */
+}
+
+.delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.update {
+    background-color: #ffc107; /* Yellow background for update button */
+    color: white; /* White text */
+}
+
+.update:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}

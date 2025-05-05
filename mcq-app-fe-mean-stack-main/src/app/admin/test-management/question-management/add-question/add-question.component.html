@@ -1,0 +1,90 @@
+<!-- <div class="container">
+    <h2>Add Question</h2>
+    <form (ngSubmit)="addQuestion()" #questionForm="ngForm">
+      
+      
+      <div class="form-group">
+        <label>Question Text</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="question.questionText"
+          name="questionText"
+          required>
+      </div>
+  
+      
+      <div
+  class="form-group"
+  *ngFor="let opt of question.options; let i = index; trackBy: trackByIndex">
+  <label>Option {{ i + 1 }}</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="question.options[i]"
+    [name]="'option' + i"
+    required>
+</div>
+
+  
+   
+      <div class="form-group">
+        <label>Correct Answer</label>
+        <select class="form-control" [(ngModel)]="question.correctAnswer" name="correctAnswer" required>
+          <option *ngFor="let opt of ['A', 'B', 'C', 'D']; let i = index" [value]="opt">
+            {{ opt }}: {{ question.options[i] }}
+          </option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-success">Add Question</button>
+    </form>
+  </div>
+  
+   -->
+
+
+   <div class="container">
+    <h2>Add Question</h2>
+    <form (ngSubmit)="addQuestion()" #questionForm="ngForm">
+      
+      <!-- Question Text -->
+      <div class="form-group">
+        <label>Question Text</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="question.questionText"
+          name="questionText"
+          required>
+      </div>
+  
+      <!-- Options A-D -->
+      <div
+  class="form-group"
+  *ngFor="let opt of question.options; let i = index; trackBy: trackByIndex">
+  <label>Option {{ i + 1 }}</label>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="question.options[i]"
+    [name]="'option' + i"
+    required>
+  </div>
+  
+  
+      <!-- Correct Answer -->
+      <div class="form-group">
+        <label>Correct Answer</label>
+        <select class="form-control" [(ngModel)]="question.correctAnswer" name="correctAnswer" required>
+          <option *ngFor="let opt of ['A', 'B', 'C', 'D']; let i = index" [value]="opt">
+            {{ opt }}: {{ question.options[i] }}
+          </option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-success">Add Question</button>
+    </form>
+  </div>
+  
+  

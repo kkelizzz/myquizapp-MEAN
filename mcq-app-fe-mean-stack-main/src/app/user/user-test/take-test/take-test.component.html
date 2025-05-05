@@ -1,0 +1,124 @@
+<!-- <h2>MCQ Test</h2>
+<form (ngSubmit)="submit()">
+  <div *ngFor="let q of questions">
+    <p><strong>{{ q.questionText }}</strong></p>
+    <div *ngFor="let opt of q.options">
+      <label>
+        <input
+          type="radio"
+          name="{{ q._id }}"
+          [value]="opt"
+          [(ngModel)]="answers[q._id]"
+          required
+        />
+        {{ opt }}
+      </label>
+    </div>
+    <hr />
+  </div>
+  <button type="submit">Submit Test</button>
+</form> -->
+
+<!-- <h2>MCQ Test</h2>
+<form (ngSubmit)="submit()">
+  <div *ngFor="let q of questions">
+    <p><strong>{{ q.questionText }}</strong></p>
+    <div *ngFor="let opt of q.options; let i = index">
+      <label>
+        <input
+          type="radio"
+          [name]="q._id"
+          [value]="getOptionLetter(i)"
+          [(ngModel)]="answers[q._id]"
+          required
+        />
+        {{ opt }}
+      </label>
+    </div>
+    <hr />
+  </div>
+  <button type="submit">Submit Test</button>
+</form> -->
+<h2>MCQ Test</h2>
+
+
+<div *ngIf="timeLeft > 0" class="progress-container">
+  <div class="time-progress">
+    <div
+      class="progress-bar"
+      [style.width.%]="getTimeProgress()"
+    ></div>
+  </div>
+  <p><strong>Time Remaining: {{ formatTime(timeLeft) }}</strong></p>
+</div>
+
+ 
+<div class="question-progress-container">
+  <div class="question-progress">
+    <div
+      class= " progress-bar question-progress-bar"
+      [style.width.%]="getQuestionProgress()"
+    ></div>
+  </div>
+  <p><strong>Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</strong></p>
+</div>
+<form (ngSubmit)="submit()">
+  <div *ngIf="questions.length > 0">
+    <p><strong>{{ questions[currentQuestionIndex].questionText }}</strong></p>
+    <div *ngFor="let opt of questions[currentQuestionIndex].options; let j = index">
+      <label>
+        <input
+          type="radio"
+          [name]="questions[currentQuestionIndex]._id"
+          [value]="getOptionLetter(j)"
+          [(ngModel)]="answers[questions[currentQuestionIndex]._id]"
+          required
+        />
+        {{ opt }}
+      </label>
+    </div>
+    <hr />
+  </div>
+
+  <div style="text-align: center;">
+    <button type="button" (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+    <button type="button" (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+  </div>
+
+  <button type="submit">Submit Test</button>
+</form>
+ 
+ 
+
+  
+
+
+<!-- <form (ngSubmit)="submit()">
+  <div *ngIf="questions.length > 0">
+    <p><strong>{{ questions[currentQuestionIndex].questionText }}</strong></p>
+    <div *ngFor="let opt of questions[currentQuestionIndex].options; let j = index">
+      <label>
+        <input
+          type="radio"
+          [name]="questions[currentQuestionIndex]._id"
+          [value]="getOptionLetter(j)"
+          [(ngModel)]="answers[questions[currentQuestionIndex]._id]"
+          required
+        />
+        {{ opt }}
+      </label>
+    </div>
+    <hr />
+  </div>
+
+  <div style="text-align: center;">
+    <button type="button" (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+    <button type="button" (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+  </div>
+
+  <button type="submit">Submit Test</button>
+</form> -->
+
+
+<!-- Question Navigation (Next and Previous) -->
+ 

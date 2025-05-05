@@ -1,0 +1,51 @@
+<!-- <h2>Your Test Reports</h2>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
+
+<div *ngIf="reports.length > 0; else noReports">
+  <div *ngFor="let report of reports" class="report-card">
+    <p><strong>Test:</strong> {{ report.testId.name }}</p>
+    <p><strong>Score:</strong> {{ report.score }}/{{ report.total }}</p>
+    <p><strong>Rank:</strong> {{ report.rank }}</p>
+    <p><strong>Submitted at:</strong> {{ report.date | date: 'h:mm a, dd-MM-yyyy' }}
+    </p>
+    <hr />
+  </div>
+</div>
+
+<ng-template #noReports>
+  <p>No reports found.</p>
+</ng-template> -->
+
+<h1 class="heading">My Reports</h1>
+<div *ngFor="let report of reports" class="report-container">
+  <div class="report-card">
+    <p><strong>Test:</strong> {{ report.testId.name }}</p>
+    <p><strong>Score:</strong> {{ report.score }}/{{ report.total }}</p>
+    <p><strong>Rank:</strong> {{ report.rank }}</p>
+    <p><strong>Submitted at:</strong> {{ report.date | date: 'h:mm a, dd-MM-yyyy' }}</p>
+  </div>
+
+  <div class="progress-circle">
+    <svg viewBox="0 0 36 36">
+      <path
+        class="circle-bg"
+        d="M18 2.0845
+           a 15.9155 15.9155 0 0 1 0 31.831
+           a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path
+      [ngClass]="getCircleClass(report.score / report.total)"
+      [attr.stroke-dasharray]="(report.score / report.total) * 100 + ', 100'"
+      d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831"
+    />
+      <text x="18" y="20.35" class="percentage">
+        {{ (report.score / report.total * 100) | number:'1.0-0' }}%
+      </text>
+    </svg>
+  </div>
+</div>

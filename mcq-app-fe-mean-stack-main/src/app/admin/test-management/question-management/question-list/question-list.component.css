@@ -1,0 +1,134 @@
+/* Add this to your component's CSS file (e.g., questions.component.css) */
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:5rem;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  button.btn-primary {
+    font-size: 15px;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+  button.btn-primary:hover{
+
+    transform: scale(1.2);
+    background-color:rgb(255, 221, 30);
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fafafa;
+  }
+  
+  .table thead th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+  }
+  
+  .table tbody td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  ul li {
+    padding: 3px 0;
+  }
+  
+  .btn-sm {
+    margin: 2px;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  @media (max-width: 768px) {
+    .table thead {
+      display: none;
+    }
+  
+    .table, .table tbody, .table tr, .table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .table tr {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+    }
+  
+    .table td {
+      text-align: left;
+      padding: 8px 10px;
+      position: relative;
+    }
+  
+    .table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      color: #666;
+    }
+  }
+  
